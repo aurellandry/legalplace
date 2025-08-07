@@ -1,4 +1,4 @@
-import { Drug } from "./drug.js";
+import { Drug } from "./drug";
 
 export class Fervex extends Drug {
   update() {

@@ -1,4 +1,4 @@
-import { DrugFactory } from "../factories/drug-factory.js";
+import { DrugFactory } from "../factories/drug-factory";
 
 export class Pharmacy {
   constructor(drugs = []) {

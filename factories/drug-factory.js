@@ -1,7 +1,7 @@
-import { Drug } from "../models/drug/drug.js";
-import { HerbalTea } from "../models/drug/herbal-tea.js";
-import { Fervex } from "../models/drug/fervex.js";
-import { MagicPill } from "../models/drug/magic-pill.js";
+import { Drug } from "../models/drug/drug";
+import { HerbalTea } from "../models/drug/herbal-tea";
+import { Fervex } from "../models/drug/fervex";
+import { MagicPill } from "../models/drug/magic-pill";
 
 export class DrugFactory {
   static createDrug(name, expiresIn, benefit) {
