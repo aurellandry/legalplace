@@ -7,10 +7,12 @@ export class Drug {
 
   update() {
     this.expiresIn--;
-    this.benefit = Math.max(0, this.benefit - 1);
+    this.benefit = Math.max(0, this.benefit - this.getDegradationRate());
+  }
 
-    if (this.expiresIn < 0) {
-      this.benefit = Math.max(0, this.benefit - 1);
-    }
+  getDegradationRate() {
+    const degradationRate = 1;
+
+    return this.expiresIn < 0 ? degradationRate * 2 : degradationRate;
   }
 }

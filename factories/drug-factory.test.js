@@ -3,6 +3,7 @@ import { Drug } from "../models/drug/drug.js";
 import { HerbalTea } from "../models/drug/herbal-tea.js";
 import { Fervex } from "../models/drug/fervex.js";
 import { MagicPill } from "../models/drug/magic-pill.js";
+import { Dafalgan } from "../models/drug/dafalgan.js";
 
 describe("DrugFactory", () => {
   it("should create a regular Drug for unknown drug names", () => {
@@ -39,5 +40,14 @@ describe("DrugFactory", () => {
 		expect(drug.name).toBe("Magic Pill");
 		expect(drug.expiresIn).toBe(15);
 		expect(drug.benefit).toBe(40);
+	});
+
+	it("should create a Dafalgan instance for 'Dafalgan'", () => {
+		const drug = DrugFactory.createDrug("Dafalgan", 5, 15);
+		
+		expect(drug).toBeInstanceOf(Dafalgan);
+		expect(drug.name).toBe("Dafalgan");
+		expect(drug.expiresIn).toBe(5);
+		expect(drug.benefit).toBe(15);
 	});
 });
